@@ -1,6 +1,5 @@
 .columnmiddle {
-    /*width: 90%;*/
-    display: block;
+    width: 100%;
     /*float: left;*/
     background-color: lightgray;
 }

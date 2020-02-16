@@ -1,14 +1,14 @@
 .block {
     background-color: white;
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 1000px;
+    margin: 50px 50px 10px 50px;
+    width: auto;
     position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .wallpaper {
     position: relative;
-    width: 1000px;
+    width: 1115px;
     height: 320px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

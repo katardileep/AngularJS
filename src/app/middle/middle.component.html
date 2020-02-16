@@ -2,15 +2,24 @@
     <div>
         <app-wallpaper></app-wallpaper>
     </div>
-    <div style="border: 0.5px solid white; padding-left: 240px;" *ngFor="let test1 of test">
-        <div *ngIf="test1.type=='1'">
-        <app-postcard [test1]=test1></app-postcard>
+    <div style="display: flex; margin: 0px 50px 0px 50px; width: 1115px;">
+        <div style="width: 300px; height: 500px; background-color: white; margin-right: 8px;">
         </div>
-        <div *ngIf="test1.type=='2'">
-            <app-postcard1 [test1]=test1></app-postcard1>
+        <div style="width: 600px">
+            <div *ngFor="let test1 of test">
+                <div *ngIf="test1.type=='1'">
+                    <app-postcard [test1]=test1></app-postcard>
+                </div>
+                <div *ngIf="test1.type=='2'">
+                    <app-postcard1 [test1]=test1></app-postcard1>
+                </div>
+            </div>
+        </div>
+        <div style="width: 299px; height: 500px; background-color: white; margin-left: 8px;">
         </div>
     </div>
- <!--   <div style="border: 0.5px solid black; padding-left: 240px;">
+
+    <!--   <div style="border: 0.5px solid black; padding-left: 240px;">
         <app-postcard1></app-postcard1>
     </div>
    <div style="border: 0.5px solid black; height: 200px;">
@@ -22,5 +31,4 @@
         <option value="Postcard_with_video">Postcard with Media</option>
         <option value="None">None</option>
       </select>-->
-</div>
-<!--<h1 style="text-align: center;">Middle of the Page</h1>-->
+    <!--<h1 style="text-align: center;">Middle of the Page</h1>-->
