@@ -6,7 +6,7 @@
         <div style="width: 300px; height: 500px; background-color: white; margin-right: 8px;">
         </div>
         <div style="width: 600px">
-            <div *ngFor="let test1 of test">
+            <div *ngFor="let test1 of Postcard">
                 <div *ngIf="test1.type=='1'">
                     <app-postcard [test1]=test1></app-postcard>
                 </div>

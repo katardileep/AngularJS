@@ -7,6 +7,15 @@
     width: 100%;
     opacity: 0.9;
   }
+  .addbtn {
+    background-color: gray;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
 input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;

@@ -1,21 +1,4 @@
-import { Injectable } from '@angular/core';
-import { Observable, Subject } from "rxjs";
-import { HttpClient, HttpHeaders, HttpHandler } from '@angular/common/http';
-import { map, catchError } from "rxjs/operators";
-
-@Injectable({
-  providedIn: 'root'
-})
-export class PostserviceService {
-
-  subjectobservable = new Subject();
-
-  constructor(private http: HttpClient) { }
-
- 
-
-  Postcard1 = [
-    {
+[{
     "type": "1",
     "user": "Dileep Katari",
     "profile_image": "assets/Profileimage.png",
@@ -27,8 +10,8 @@ export class PostserviceService {
     "no_of_liked": "7",
     "no_of_comments": "25",
     "no_of_replies": "32",
-    "comments":[
-      {
+    "comments":
+      [{
         "comment_profile_image": "assets/avatar68-sm.jpg",
         "comment_user": "Michael Reeves",
         "comment_hours_back": "17 minutes ago",
@@ -55,27 +38,11 @@ export class PostserviceService {
   },
   {
     "type": "2",
-    "user": "Vamsi Katari",
+    "user": "Dileep Katari",
     "profile_image": "assets/Profileimage.png",
     "hours_back": "18 hours ago",
     "post_title": "Video Captured by My Friend",
     "post_source": "assets/movie.mp4",
-    "no_of_likes": "7",
+    "no_of_likes": "7"
   }
   ]
- 
-  getPostCard() {
-    return this.http.get('https://project-dileep.firebaseio.com/Postcard.json').pipe(
-      map(
-        (response: Response) => {
-          const data: any = response;
-          return data;
-        }
-      ), catchError(
-        (error: Response) => {
-          return Observable.throw('Something went wrong');
-        }
-      )
-    );
-  }
-  }

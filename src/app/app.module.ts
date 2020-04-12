@@ -13,16 +13,19 @@ import { MiddleComponent } from './middle/middle.component';
 import { Postcard1Component } from './postcard1/postcard1';
 import {PostcardcontentComponent} from './postcard-content/postcard-content';
 import {Postcard1contentComponent} from './postcard1-content/postcard1-content';
+import {ProfileimageComponent} from './profileimage/profileimage';
 import { BindingComponent } from './binding/binding.component';
 import { PostserviceService } from './postservice.service';
 import { WallpaperComponent } from './wallpaper/wallpaper.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
   { path: 'profilepage', component: ProfilepageComponent },
+  { path: 'profileimage', component: ProfileimageComponent },
   { path: 'loginpage', component: LoginpageComponent },
   { path: '',   redirectTo: '/loginpage', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
@@ -43,12 +46,14 @@ const appRoutes: Routes = [
     WallpaperComponent,
     ProfilepageComponent,
     LoginpageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProfileimageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

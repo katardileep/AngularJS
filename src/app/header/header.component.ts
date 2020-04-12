@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostserviceService } from '../postservice.service';
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private PostserviceService: PostserviceService) { }
+  onlyObservable() {
+    this.PostserviceService.subjectobservable.next("assets/avatar68-sm.jpg");
+  }
 
   ngOnInit() {
   }

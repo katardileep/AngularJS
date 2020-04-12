@@ -7,9 +7,18 @@ import { PostserviceService } from './../postservice.service';
   styleUrls: ['./middle.component.css']
 })
 export class MiddleComponent implements OnInit {
-  public test = [];
-  constructor(private postservice: PostserviceService) { }
+  public Postcard;
+  constructor(private postservice: PostserviceService) {}
+  
   ngOnInit() {
-    this.test=this.postservice.Postcard;
+    this.Postcard=this.onGet();
+  }
+  
+  onGet() {
+    this.postservice.getPostCard()
+      .subscribe(
+        (Postcard:any) => this.Postcard = Postcard,
+        (error) => console.log(error)
+      );
   }
 }
